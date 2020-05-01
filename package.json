@@ -1,0 +1,57 @@
+{
+  "name": "on-off-boardui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-brands-svg-icons": "^5.8.2",
+    "@fortawesome/free-regular-svg-icons": "^5.8.2",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "antd": "^3.20.3",
+    "bootstrap": "^4.3.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "query-string": "^6.8.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-pdf": "^4.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "react-redux": "^7.1.0",
+    "simple-crypto-js": "^2.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build-dev": "dotenv -e .env react-scripts build",
+    "build-test": "GENERATE_SOURCEMAP=false dotenv -e .env.test react-scripts build",
+    "build-prod": "GENERATE_SOURCEMAP=false dotenv -e .env.production react-scripts build",
+    "build-sandbox": "GENERATE_SOURCEMAP=false dotenv -e .env.sandbox react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "babel-preset-react-app": "^9.0.0",
+    "dotenv": "^6.2.0",
+    "dotenv-cli": "^1.4.0"
+  }
+}

@@ -1,0 +1,142 @@
+.login-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/login_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .login-form {
+        width: 400px;
+        position: absolute;
+        left: 80%;
+        top: 38%;
+        transform: translate(-50%, -50%);
+
+        p {
+            margin: 0 0 2rem;
+            color: #707070;
+            font-size: 15px;
+
+            &.error {
+                color: #f5222d;
+            }
+        }
+
+        .login-btn {
+            float: right;
+            height: 40px;
+
+
+            .btn-arrow {
+                display: inline-block;
+                margin-left: 20px;
+                position: relative;
+                top: -3px;
+            }
+        }
+
+        .ant-form-item-required::before,
+        .ant-form-item-label>label::after {
+            display: none;
+        }
+
+        .pwd-section {
+            .down-arw {
+                display: inline-block;
+                transform: rotate(90deg);
+            }
+        }
+
+        .forgot-sec {
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .link-arrow {
+                display: inline-block;
+                margin-right: 2px;
+                position: relative;
+                top: -3px;
+            }
+        }
+
+
+    }
+
+    a {
+        color: #2C5BA7;
+
+        &:hover {
+            color: #054386;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .login-form {
+            width: 330px;
+            left: 78%;
+
+            .ant-input {
+                background: transparent;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        .login-form {
+            width: 310px;
+            left: 76%;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        background: none;
+        position: relative;
+
+        &:before {
+            content: "";
+            background-image: url(assets/login_bg.png);
+            position: fixed;
+            width: 217%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.05;
+        }
+
+        &:after {
+            content: "E-Onboard";
+            background-image: url(assets/logo.png);
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 82px;
+            height: 82px;
+            text-align: center;
+            left: 50%;
+            margin-left: -41px;
+            top: 10px;
+            padding-top: 70px;
+        }
+
+        .login-form {
+            width: 400px;
+            max-width: 100%;
+            padding: 0 20px;
+            padding-top: 0;
+            left: 50%;
+            top: 50%;
+
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) and (orientation : landscape) {
+        .login-form {
+            padding-top: 260px;
+        }
+    }
+}

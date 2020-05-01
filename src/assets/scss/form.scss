@@ -1,0 +1,191 @@
+// ant-input 
+.ant-input,
+.ant-input-group-addon {
+    padding-left: 0;
+    border: 0 none;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 0;
+    color: #5d5d5d;
+
+    &:hover {
+        border-color: #c75e7e;
+    }
+
+    &:focus {
+        border-color: #c75e7e;
+        border-right-width: 1px !important;
+        outline: 0;
+        -webkit-box-shadow: 0 0 0 2px rgba(199, 94, 126, 0.2);
+        box-shadow: 0 0 0 2px rgba(199, 94, 126, 0.2);
+        box-shadow: none;
+    }
+}
+.currency-symbol {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+}
+.salary-input {
+    input {
+        padding-left: 15px;
+        
+    }
+
+    .ant-input {
+        padding-left: 15px !important;
+        
+    }
+
+    .ant-input-number-handler-wrap {
+        display: none;
+    }
+
+    .ant-form-item-control {
+        line-height: 0px;
+        zoom: 1;
+    }
+}
+
+.has-error .ant-input:focus {
+    box-shadow: none;
+}
+
+// ant select
+
+.ant-select-focused .ant-select-selection,
+.ant-select-selection:focus,
+.ant-select-selection:active {
+    border-color: #c75e7e;
+    border-right-width: 1px !important;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 2px rgba(199, 94, 126, 0.2);
+    box-shadow: 0 0 0 2px rgba(199, 94, 126, 0.2);
+    box-shadow: none;
+}
+
+// ant datepicker
+.ant-calendar-picker:hover .ant-calendar-picker-input:not(.ant-input-disabled) {
+    border-color: #df0078;
+}
+
+// ant-form-item label 
+.ant-form-item-label {
+    line-height: 20px;
+
+    label {
+        margin-bottom: 0;
+        color: #8C8C8C;
+
+        &:after {
+            display: none;
+        }
+    }
+
+}
+
+.ant-select-selection {
+    padding-left: 0;
+    border: 0 none;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 0;
+}
+
+.ant-select-selection__rendered {
+    margin-left: 0;
+}
+
+.ant-form-item-required::before {
+    display: none;
+}
+
+
+// Ant Radio btn
+.ant-radio-checked .ant-radio-inner {
+    border-color: #d34a7c;
+}
+
+.ant-radio-wrapper:hover .ant-radio,
+.ant-radio:hover .ant-radio-inner,
+.ant-radio-input:focus+.ant-radio-inner {
+    border-color: #d34a7c;
+}
+
+.ant-radio-inner::after {
+    background-color: #d34a7c;
+}
+
+
+// ant calendar 
+.ant-calendar-picker {
+    width: 100%;
+}
+
+.ant-calendar-picker-icon {
+    color: rgb(211, 74, 124);
+}
+
+// ant avatar uploader 
+.avatar-uploader>.ant-upload {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 1rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto !important;
+    }
+}
+
+.upload-hint {
+    font-size: 13px;
+    color: #828282;
+    display: block;
+    text-align: center;
+    width: 300px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.ant-upload-select-picture-card i {
+    font-size: 32px;
+    color: #999;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+    margin-top: 8px;
+    color: #666;
+}
+
+.ant-upload.ant-upload-select-picture-card:hover {
+    border-color: #d34a7c;
+}
+
+@media only screen and (max-width: 767.98px) {
+
+    // ant avatar uploader 
+    .avatar-uploader>.ant-upload {
+        width: 80px;
+        height: 80px;
+    }
+
+    .upload-hint {
+        margin: 0 auto 1.5rem;
+    }
+}
+
+.inline-edit {
+    .anticon {
+        position: absolute;
+        right: 0;
+        top: -30px;
+    }
+
+    .ant-input-group-addon {
+        padding-left: .6rem;
+    }
+
+    .ant-input-group-addon:hover {
+        border-color: #d9d9d9;
+    }
+}

@@ -1,0 +1,448 @@
+.card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 1.0rem 1rem;
+    border: 0 none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+
+    &.user-card {
+        padding: 0;
+        // min-height: calc(100vh - 200px);
+
+        .search-row {
+            margin: 0 0 2rem;
+            padding: 0 2rem;
+
+
+            .col-lg-6 {
+                padding: 0;
+            }
+        }
+
+        .ant-input-search {
+            width: 280px;
+
+            input {
+                background-color: #F6F6F6;
+                border-radius: 30px;
+                padding-left: 15px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                height: 38px;
+                // border: 1px solid #F6F6F6;
+                border: 0 none;
+
+                &:focus {
+                    box-shadow: none;
+                    border-color: #F6F6F6;
+
+                }
+            }
+        }
+
+        .ant-pagination {
+            padding: 0 2rem 2rem;
+        }
+
+        .avatar-uploader>.ant-upload {
+            position: relative;
+            border-radius: 50%;
+
+            .edit {
+                position: absolute;
+                right: 6px;
+                top: 3px;
+                padding: 5px 6px;
+                line-height: 1;
+                background: #d34a7c;
+                color: #ffffff;
+                border-radius: 7px;
+                display: block;
+
+                svg {
+                    .a {
+                        fill: none;
+                    }
+
+                    .b {
+                        fill: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    &.emp-card {
+        .ant-tabs-nav .ant-tabs-tab {
+            padding: 0 0 20px;
+            margin: 0 50px 0 0;
+        }
+
+        .ant-tabs-bar {
+            padding: 1.4rem 2rem 0;
+        }
+
+        .form-container {
+            padding: 0 3rem 2rem;
+
+        }
+
+        .tab-nav-btns {
+            position: absolute;
+            right: 20px;
+            top: 11px;
+
+            .anticon {
+                line-height: 1.5;
+            }
+
+            .btn-cancel {
+                background: #E6E6E6 0% 0% no-repeat padding-box;
+                box-shadow: 0px 7px 12px rgba(178, 178, 178, .2);
+
+                &:hover,
+                &:focus {
+                    color: #555555;
+                    background-color: #E6E6E6;
+                    border-color: #E6E6E6;
+                }
+            }
+        }
+
+        .docs-row {
+            margin: 0;
+            padding: 1rem 2.5rem 0;
+            align-items: center;
+
+            .action-btn {
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    width: 30px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #D23B7D;
+                    }
+                }
+            }
+
+
+            .folder-name {
+                font-size: 16px;
+                color: rgba(0, 0, 0, .85);
+            }
+
+            .attached-docs {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #dddddd;
+            }
+
+            .btn-with-icon {
+                // margin-left: 300px;
+                background: none;
+                color: #D23B7D;
+                height: 32px;
+                box-shadow: none;
+                font-size: 13px;
+                transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+                span {
+                    margin-left: 3px;
+                }
+
+                .anticon {
+                    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    background: none;
+                    color: #D23B7D;
+                    padding: 0;
+                }
+
+                &:hover {
+                    background: #D23B7D;
+                    color: #ffffff;
+                    border-color: #D23B7D;
+
+                    .anticon {
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            .employeeDoc {
+                display: flex;
+                align-items: center;
+                min-width: 300px;
+                max-width: 400px;
+                height: 60px;
+                background: #F7F6F8;
+                padding: 10px;
+                padding-right: 50px;
+                border-radius: 5px;
+                margin: 15px 15px 0 0;
+                position: relative;
+
+                .file-img {
+                    margin-right: 10px;
+                    display: inline-block;
+
+                    img {
+                        max-height: 40px;
+                        max-width: 40px;
+                    }
+                }
+
+                .file-name {
+                    word-break: break-all;
+                    white-space: nowrap;
+                    width: 190px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .anticon {
+                    position: absolute;
+                    right: 15px;
+                    background: #D23B7D;
+                    color: #ffffff;
+                    border-radius: 50%;
+                    border: 0 none;
+                    font-size: 29px;
+                }
+
+                .download-icon {
+                    position: absolute;
+                    right: 60px;
+                    font-size: 18px;
+                    padding: 4px;
+                }
+            }
+        }
+
+        .add-more-docs {
+            margin: 1.5rem 0 0;
+            padding: 0 2.5rem 1rem;
+
+            a {
+                font-size: 16px;
+                color: #D23B7D;
+            }
+        }
+
+
+
+    }
+
+    &.edit-org-card {
+        height: calc(100vh - 190px);
+        overflow: auto;
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 6px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            background-color: #adadad;
+        }
+
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .card {
+        &.emp-card {
+            .ant-tabs-nav .ant-tabs-tab {
+                margin: 0 40px 0 0;
+            }
+
+        }
+    }
+
+}
+
+@media only screen and (max-width: 991.98px) {
+    .card {
+        &.user-card {
+            .search-row {
+                .col-lg-12 {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    flex-wrap: wrap;
+                    flex: none;
+                    padding: 0;
+
+                    .btn-with-icon {
+                        margin: 0 0 1rem !important;
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+
+                .ant-input-search {
+                    width: 100%;
+                }
+            }
+        }
+
+        &.emp-card {
+
+            .ant-tabs-tab-prev,
+            .ant-tabs-tab-next {
+                top: -10px;
+            }
+
+            // .ant-tabs .ant-tabs-top-content>.ant-tabs-tabpane,
+            // .ant-tabs .ant-tabs-bottom-content>.ant-tabs-tabpane {
+            //     height: auto;
+            // }
+
+            .tab-nav-btns {
+                display: none;
+            }
+
+            .ant-tabs-bar {
+                padding: 1rem 1rem 0;
+            }
+
+            .ant-tabs-nav .ant-tabs-tab {
+                margin: 0 40px 0 0;
+                padding: 0 0 15px;
+            }
+
+            .personal-details {
+                .form-container {
+                    .row {
+                        .col-lg-4 {
+                            order: 1;
+                        }
+
+                        .col-lg-8 {
+                            order: 2;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.edit-org-card {
+            .form-container {
+                .row {
+                    .col-lg-4 {
+                        order: 1;
+                    }
+
+                    .col-lg-8 {
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 767.98px) {
+    .card {
+        &.user-card {
+            .search-row {
+                flex-direction: column-reverse;
+
+                .ant-input-search {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &.emp-card {
+            .form-container {
+                padding: 0 1.5rem 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+
+    .card {
+
+        &.user-card {
+            .search-row {
+                .ant-input-search {
+                    margin-top: 0;
+                }
+
+                .btn-with-icon {
+                    width: 100%;
+                    margin: 0 0 1rem;
+                }
+            }
+        }
+
+        &.emp-card {
+            .deprovisioning {
+                p {
+                    padding: 0 15px;
+                }
+            }
+
+            .add-more-docs {
+                padding: 0 1.5rem 1rem;
+            }
+
+
+            .docs-row {
+                padding: 0 1.5rem 1rem;
+
+                .attached-docs {
+                    padding-right: 0;
+                }
+
+                .action-btn {
+                    text-align: right;
+                }
+
+                .folder-name {
+                    font-size: 14px;
+                    margin: 0 0 1rem;
+                    display: inline-block;
+                }
+
+                .employeeDoc {
+                    margin: 20px 0 0;
+                    width: 100%;
+                    max-width: 100%;
+
+                    .file-name {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        &.edit-org-card {
+            .form-container {
+                .ant-btn {
+                    width: 100%;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+}

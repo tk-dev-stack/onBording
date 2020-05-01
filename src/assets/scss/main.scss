@@ -1,0 +1,1077 @@
+/****************************************************************************************************************
+                                                ANT LAYOUT
+****************************************************************************************************************/
+.ant-layout {
+    background-color: #F5F6FF;
+}
+
+/****************************************************************************************************************
+                                                ANT LAYOUT CONTENT
+****************************************************************************************************************/
+.ant-layout-content {
+    background-color: #F5F6FF;
+    height: 100vh;
+    padding: 200px 80px 20px;
+    padding: 100px 80px 20px;
+    // overflow: auto;
+
+    .blue-shape {
+        top: -99px;
+        left: -93px;
+        width: 446px;
+        height: 446px;
+        background: transparent linear-gradient(298deg, #2D5AB6 0%, #1C4392 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 8px 8px 14px rgba(0, 0, 0, .16);
+        border-radius: 50%;
+        position: absolute;
+    }
+}
+
+/****************************************************************************************************************
+                                                MAIN CONTENT
+****************************************************************************************************************/
+.main-content {
+    margin: 0 0 2rem;
+    padding: 0 !important;
+
+    h4 {
+        font-weight: 400;
+        margin: 0 0 1.5rem;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        .anticon {
+            // color: #D23B7D;
+            padding-right: 15px;
+            font-size: 18px;
+            transition: color .3s ease;
+
+            &:hover,
+            &:focus {
+                color: #D23B7D;
+            }
+        }
+
+        span {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .ant-menu-inline .ant-menu-submenu-title {
+        padding-left: 0 !important;
+    }
+
+    .ant-menu-inline,
+    .ant-menu-vertical,
+    .ant-menu-vertical-left {
+        border-right: 0;
+    }
+}
+
+/****************************************************************************************************************
+                                        DASHBOARD AND EMPLYOEE LIST TOP
+****************************************************************************************************************/
+
+.emplyoee-list-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 30px;
+    position: relative;
+    min-height: 70px;
+
+    .add-emplyoee {
+        position: absolute;
+        left: 50%;
+        top: 3em;
+        margin-left: -75px;
+
+        .btn-with-icon {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+
+            .anticon {
+                font-size: 80px;
+                background: #d34a7c;
+                color: #ffffff;
+                position: relative;
+                left: 20px;
+            }
+
+            span {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+
+    .search-employee {
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: auto;
+
+        .filter-by {
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 14px;
+            margin: 0 25px 0 0;
+            cursor: pointer;
+
+            &.title {
+                color: #808080;
+            }
+
+
+            .sorting-icons {
+                display: inline-flex;
+                flex-direction: column;
+                position: relative;
+                top: -5px;
+                margin: 0;
+
+
+                .anticon {
+                    display: block;
+                    font-size: 8px;
+                    width: 10px;
+                    height: 5px;
+                }
+            }
+
+            &.sorting {
+                &:active {
+
+                    .sorting-icons {
+                        display: inline-flex;
+                        flex-direction: column;
+                        position: relative;
+                        top: -5px;
+                        margin: 0;
+                        color: #d34a7c;
+                    }
+                }
+
+                &:hover {
+                    .sorting-icons {
+                        display: inline-flex;
+                        flex-direction: column;
+                        position: relative;
+                        top: -5px;
+                        margin: 0;
+                        color: #d34a7c;
+                    }
+                }
+
+            }
+
+            &.ant-input-search {
+                .ant-input {
+                    background: none;
+                }
+
+                .ant-input-suffix {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}
+
+/****************************************************************************************************************
+                                        EMPLYOEE LIST
+****************************************************************************************************************/
+.employee-list {
+    height: calc(100vh - 190px);
+    overflow: hidden;
+    padding: 200px 15px 0 6px;
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #adadad;
+    }
+
+    .card {
+        flex-direction: row;
+        margin: 0 0 15px;
+        border-radius: 6px;
+        transition: 0.2s;
+        display: block;
+        padding: 0;
+        font-size: 14px;
+
+        .card-title {
+            cursor: pointer;
+        }
+
+        .card-body {
+            display: none;
+        }
+
+        &.ani {
+            margin: 0;
+
+            .card-body {
+                display: block;
+            }
+        }
+
+        // &:first-child {
+        //     margin: 0;
+        // }
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 1.5rem 1rem 1.25rem;
+            // border-bottom: 1px solid #ffcbde;
+        }
+
+        &:hover {
+            box-shadow: 0 3px 14px rgba(211, 74, 124, .4);
+        }
+
+        .ant-avatar {
+            color: rgba(0, 0, 0, 0.85);
+            background: #ececec;
+        }
+
+        .col {
+            padding: 0 10px;
+            word-break: break-all;
+
+            span {
+                display: block;
+                font-size: 14px;
+
+                &.title {
+                    color: #808080;
+                    margin: 0 0 2px;
+                }
+            }
+
+            .ant-progress-text {
+                display: inline-block;
+                font-size: 1em;
+            }
+        }
+
+        .emp-profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            min-width: 200px;
+
+            .ant-avatar-string {
+                font-size: 1rem;
+                font-weight: 500;
+                color: #444444;
+            }
+
+            .emp-info {
+                margin-left: 10px;
+
+                .emp-name {
+                    font-weight: 500;
+                }
+
+                .emp-designation {
+                    color: #808080;
+                }
+            }
+        }
+
+        .email {
+            min-width: 180px;
+        }
+
+        .docs,
+        .provision,
+        .training {
+            min-width: 130px;
+            margin: 0 0 0 20px;
+        }
+
+        .doj,
+        .emp-id {
+            min-width: 110px;
+            // flex: none;
+        }
+
+        .ant-progress-success-bg,
+        .ant-progress-bg {
+            background-color: #d34a7c;
+            background: transparent linear-gradient(90deg, #2D5AB6 0%, #D23B7D 100%) 0% 0% no-repeat padding-box;
+        }
+
+        // emplyoee details
+        .employee-details {
+            padding: 1rem;
+            border-top: 1px solid #ffcbde;
+            height: calc(100vh - 330px);
+            overflow: auto;
+
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                border-radius: 6px;
+                background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: #F5F5F5;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 6px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+                background-color: #adadad;
+            }
+
+            .personal-details {
+                border-right: 1px solid #ccc;
+
+                .label-title {
+                    font-weight: 500;
+                }
+
+                .row {
+                    margin: 0 0 1rem;
+                }
+
+            }
+
+            .official-details {
+                padding: 10px 30px;
+
+                svg {
+                    .a {
+                        fill: none;
+                    }
+
+                    .b {
+                        fill: #D23B7D;
+                    }
+                }
+
+                h5 {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: #8e8e8e;
+                    margin: 0 0 1rem;
+                }
+
+                .docs-row {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin: 0 0 3rem;
+
+
+
+                    .details-box {
+                        padding: 10px;
+                        border-radius: 4px;
+                        border: 1px solid #ddd5d5;
+                        color: black;
+                        position: relative;
+                        overflow: hidden;
+                        width: 170px;
+                        height: 100px;
+                        margin: 10px 20px 10px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        span {
+                            display: inline-block;
+                            margin: 10px 0 0;
+                        }
+
+                        .hover-box {
+                            background-color: #4B4B4B;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all .2s ease;
+
+                            div {
+                                padding: 0 5px;
+                                text-align: center;
+
+                                span {
+                                    display: block;
+                                    // padding-top: 5px;
+                                    font-size: 12px;
+                                    color: #ffffff;
+                                }
+                            }
+
+                        }
+
+                        &:hover .hover-box,
+                        &:hover .completed {
+                            opacity: 1;
+                            visibility: visible;
+                            top: 0;
+                        }
+
+                        &.completed {
+                            border: 1px solid #D23B7D;
+                            overflow: inherit;
+
+                            .completed-icon {
+                                position: absolute;
+                                right: -8px;
+                                top: -8px;
+                                width: 18px;
+                                height: 18px;
+                                background: #D23B7D;
+                                text-align: center;
+                                line-height: 14px;
+                                border-radius: 4px;
+
+                                .anticon {
+                                    color: rgb(255, 255, 255);
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+
+                        &.addNew,
+                        &.add-new {
+                            &:hover {
+                                border: 1px dashed #d34a7c;
+                                color: #d34a7c;
+                                cursor: pointer;
+                            }
+
+                        }
+                    }
+                }
+
+                a {
+                    float: right;
+                    color: #D23B7D;
+                }
+            }
+        }
+
+    }
+}
+
+// onload animation
+.onload-ani {
+    .blue-shape {
+        transition: all 1s ease;
+        left: -50%;
+        top: -50%;
+    }
+
+    .search-employee {
+        opacity: 1;
+        visibility: visible;
+        transition: all 2s ease;
+    }
+
+    .add-emplyoee {
+        position: absolute;
+        left: 0;
+        margin-left: 0;
+        top: 0;
+        transition: all 1s ease;
+
+        .btn-with-icon {
+            height: 40px;
+            width: 151px;
+            border-radius: 32px;
+            transition: all 1s ease;
+
+            .anticon {
+                font-size: 14px;
+                background: #ffffff;
+                color: #d34a7c;
+                position: relative;
+                left: 0;
+                transition: all 1s ease;
+            }
+
+            span {
+                opacity: 1;
+                visibility: visible;
+                transition: all 1s ease;
+            }
+        }
+    }
+
+    .employee-list {
+        padding: 0 15px 0 6px;
+        transition: all 1s ease;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+
+/****************************************************************************************************************
+                                                ALERT STYLE
+****************************************************************************************************************/
+
+.alert {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    padding: 1rem 2.5rem 1rem 4rem;
+    border-radius: 0;
+    font-size: 16px;
+    top: 65px;
+
+    &.alert-success {
+        width: 35%;
+        float: right;
+
+        color: #ffffff;
+        background-color: #d4edda;
+        border-color: #F1993F;
+        border: 0 none;
+        background: linear-gradient(270deg, #e35695 0%, #874ea2);
+        transition: all .2s ease;
+    }
+
+    &.alert-failure {
+        width: 35%;
+        float: right;
+        color: #ffffff;
+        background-color: #d4edda;
+        border-color: #F1993F;
+        border: 0 none;
+        background: linear-gradient(270deg, #f5222d 0%, #f5bd06);
+        transition: all .2s ease;
+    }
+
+    &.alert-expired {
+        width: 35%;
+        float: right;
+        color: #ffffff;
+        background-color: #d4edda;
+        border-color: #F1993F;
+        border: 0 none;
+        background: linear-gradient(270deg, rgb(252, 221, 235) 0%, #e35695);
+        transition: all .2s ease;
+    }
+
+    &.alert-dismissible {
+        padding-right: 4rem;
+
+        .close {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+
+}
+
+/****************************************************************************************************************
+                                                ALERT ANIMATIONS
+****************************************************************************************************************/
+.animated {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-fill-mode: both
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite
+}
+
+.animated.delay-1s {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+.animated.delay-2s {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.animated.delay-3s {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s
+}
+
+.animated.delay-4s {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s
+}
+
+.animated.delay-5s {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s
+}
+
+.animated.fast {
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s
+}
+
+.animated.faster {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s
+}
+
+.animated.slow {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s
+}
+
+.animated.slower {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -10%, 0);
+        transform: translate3d(0, -10%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -10%, 0);
+        transform: translate3d(0, -10%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+
+// SlideInRight
+@-webkit-keyframes slideInRight {
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: visible
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: visible
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+}
+
+@-webkit-keyframes slideOutRight {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    to {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: hidden
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    to {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: hidden
+    }
+}
+
+.slideOutRight {
+    -webkit-animation-name: slideOutRight;
+    animation-name: slideOutRight
+}
+
+/****************************************************************************************************************
+                                                ANT DRAWER
+****************************************************************************************************************/
+
+.ant-menu-inline .ant-menu-submenu-title {
+    padding-left: 0 !important;
+    height: 30px !important;
+}
+
+.ant-slider {
+    height: 20px;
+}
+
+.ant-drawer-wrapper-body {
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #adadad;
+    }
+}
+
+.ant-drawer-body {
+    overflow-x: hidden;
+}
+
+.ant-drawer-header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.drawer-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    background: #ffffff;
+    padding: 10px 10px 10px;
+    border-top: 1px solid #e8e8e8;
+
+    .ant-btn {
+        height: 36px;
+        min-width: 90px;
+        letter-spacing: normal;
+    }
+}
+
+.ant-menu-submenu>.ant-menu p {
+    padding: 5px 0;
+}
+
+.ant-drawer .ant-drawer-content {
+    padding-bottom: 77px;
+    padding-top: 55px;
+}
+
+.ant-drawer-close {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #333333;
+    border-radius: 50%;
+    line-height: 10px;
+    font-size: 13px;
+    top: 15px;
+    right: 12px;
+    color: #333333;
+    transition: all .3s ease;
+
+    &:hover,
+    &:focus {
+        background: #D23B7D;
+        border: 1px solid #D23B7D;
+        color: #ffffff;
+        outline: 0;
+    }
+}
+
+.ant-menu-submenu-vertical>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical-left>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical-right>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-inline>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-vertical-left>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-vertical-right>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-inline>.ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before {
+    background: -webkit-gradient(linear, left top, right top, from(#d34a7c), to(#d34a7c));
+    background: linear-gradient(to right, #d34a7c, #d34a7c);
+}
+
+/****************************************************************************************************************
+                                                ANT SLIDER
+****************************************************************************************************************/
+
+.ant-slider-handle {
+    border: solid 2px #D23B7D;
+    background-color: #D23B7D;
+
+    &.ant-tooltip-open {
+        border-color: #D23B7D;
+    }
+}
+
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+    border-color: #a14b65;
+}
+
+.ant-slider-track,
+.ant-slider:hover .ant-slider-track {
+    background-color: #dca6ba;
+}
+
+.ant-slider-handle:focus {
+    border-color: #c75e7e;
+    outline: none;
+    -webkit-box-shadow: 0 0 0 5px rgba(199, 94, 126, 0.2);
+    box-shadow: 0 0 0 5px rgba(199, 94, 126, 0.2);
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+    background: #fff1f5;
+}
+
+.ant-menu-item:hover,
+.ant-menu-item-active,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover {
+    color: #c75e7e;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .ant-layout-content {
+        padding: 100px 35px 20px;
+    }
+
+    .employee-list {
+        .card {
+            .card-title {
+                padding: 1rem 1.5rem;
+                flex-wrap: wrap;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+
+                .col {
+                    padding: 10px 5px;
+                    margin: 0;
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+
+            .emp-profile {
+                // flex: auto;
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+
+            .employee-details {
+                height: auto;
+            }
+
+            &.ani {
+                .card-title {
+                    background: #fbfbfb;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+
+    html,
+    body {
+        height: auto;
+        background-color: #F5F6FF;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .emplyoee-list-top {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: inherit;
+
+        .search-employee {
+            flex: none;
+            margin-top: 60px;
+            flex-wrap: wrap;
+
+            .search-by {
+                flex: 0 0 100%;
+                max-width: 100%;
+                order: 3;
+
+                .ant-input-search {
+                    width: 100% !important;
+                }
+            }
+
+            .sort-by {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex: none;
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin: 0 0 1rem;
+            }
+
+            .filter-by {
+                margin: 0 0 1rem;
+                position: absolute;
+                top: 10px;
+                right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .main-content {
+        .ant-btn-secondary {
+            width: 90%;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .ant-layout-content {
+        padding: 100px 20px 20px;
+        overflow-x: hidden;
+    }
+
+    .emplyoee-list-top {
+        .search-employee {
+            span {
+                font-size: 13px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+
+    .employee-list {
+        height: auto;
+
+        .card {
+            .card-title {
+                padding: .5rem 1rem;
+
+                .col {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+
+            .card-body {
+                overflow-x: hidden;
+            }
+
+            .employee-details {
+                padding: 1rem 8px;
+
+                .personal-details {
+                    span {
+                        display: block;
+                    }
+
+                    .label-title {
+                        color: #808080;
+                        margin: 0 0 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .onload-ani .employee-list {
+        padding: 0;
+    }
+}
+
+.document-preview {
+    height: 100vh;
+    width: 100%;
+    .ant-spin-dot {
+        top: 40%;
+     }
+}
+.desc-width{
+    position: absolute;
+    right: 23px;
+    top: 30%;
+}
+.provison-desc-width{
+    position: absolute;
+    right: 23px;
+    top: 38%;
+}

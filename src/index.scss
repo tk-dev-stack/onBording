@@ -1,0 +1,19 @@
+@import 'assets/scss/button.scss';
+@import 'assets/scss/form.scss';
+@import 'assets/scss/header.scss';
+@import 'assets/scss/modal.scss';
+@import 'assets/scss/login.scss';
+@import 'assets/scss/table.scss';
+@import 'assets/scss/tabs.scss';
+@import 'assets/scss/card.scss';
+@import 'assets/scss/main.scss';
+
+
+// Font 
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #242424;
+    font-weight: 400;
+}

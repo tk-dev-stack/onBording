@@ -1,0 +1,89 @@
+.ant-btn {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    &.login-btn,
+    &.cancel-btn {
+        height: 40px;
+        font-size: 14px;
+        min-width: 100px;
+        text-transform: capitalize;
+    }
+
+    &.cancel-btn {
+        background: #E5E5E5;
+        color: rgba(0, 0, 0, 0.85);
+        border: 1px solid #E5E5E5;
+    }
+}
+
+.ant-btn-round {
+    height: 34px;
+}
+
+.ant-btn-primary {
+    color: #fff;
+    background-color: #D23B7D;
+    border-color: #D23B7D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 6px 12px rgba(255, 86, 159, 0.2);
+    box-shadow: 0 6px 12px rgba(255, 86, 159, 0.2);
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: #D23B7D;
+        border-color: #D23B7D;
+    }
+}
+
+.ant-btn-secondary {
+    color: #fff;
+    background-color: #2D5AB6;
+    border-color: #2D5AB6;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 6px 12px rgba(36, 106, 176, 0.2);
+    box-shadow: 0 6px 12px rgba(36, 106, 176, 0.2);
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: #2D5AB6;
+        border-color: #2D5AB6;
+    }
+}
+
+.btn-with-icon {
+    text-transform: capitalize;
+    height: 40px;
+    font-size: 14px;
+    letter-spacing: normal;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 10px;
+
+    .anticon {
+        font-size: 14px;
+        padding: 4px;
+        background: #ffffff;
+        color: #d34a7c;
+        border-radius: 50%;
+    }
+
+    &.ant-btn-secondary {
+        .anticon {
+            color: #2D5AB6;
+        }
+    }
+
+    &.ant-btn-primary-disabled,
+    &.ant-btn-primary.disabled,
+    &.ant-btn-primary[disabled] {
+        .anticon {
+            color: rgba(0, 0, 0, 0.25);
+            background-color: #f3f3f3;
+        }
+
+    }
+}

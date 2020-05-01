@@ -1,0 +1,102 @@
+.ant-layout-header {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0 3rem;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    line-height: inherit;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 !important;
+        .home-nev{
+            cursor: pointer;
+        }
+    }
+
+    .logo {
+        img {
+            max-height: 70px;
+        }
+
+        .logo-text {
+            font-weight: 400;
+        }
+    }
+
+    .welcome-sec {
+        display: flex;
+        align-items: center;
+
+        .user-name {
+            font-size: 1em;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.72);
+
+            i {
+                padding-left: 5px;
+            }
+
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .ant-avatar {
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            cursor: pointer;
+            background-color: #d34a7c;
+            background: transparent linear-gradient(90deg, #2D5AB6 0%, #D23B7D 100%) 0% 0% no-repeat padding-box;
+            color: #ffffff;
+        }
+
+    }
+
+}
+
+
+
+.ant-popover-inner-content {
+    padding-left: 0;
+    padding-right: 0;
+    width: 160px;
+
+
+    a {
+        padding: .5rem 1rem !important;
+        display: block !important;
+        color: rgba(0, 0, 0, 0.85) !important;
+
+        &:hover {
+            background-color: rgba(210, 59, 125,.24) !important;
+            text-decoration: none !important;
+        }
+        &:active {
+            background-color: rgba(210, 59, 125,.24)!important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .ant-layout-header {
+        padding: 0 1.5rem 0 1rem;
+    }
+}
+@media only screen and (max-width: 575.98px) {
+    .ant-layout-header {
+        padding: 0 1rem 0 0;
+        top: 0;
+        .welcome-sec .user-name {
+           display: none;
+        }
+    }
+
+}
